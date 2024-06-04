@@ -24,6 +24,7 @@ jobs:
     - run: curl localhost:8000
     - name: Install Playwright browsers
       run: npx playwright install --with-deps
+    - run: npx envinfo --preset playwright
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
