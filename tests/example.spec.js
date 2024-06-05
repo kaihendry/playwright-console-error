@@ -13,10 +13,9 @@ test('console error', async ({ page }) => {
     messages.push(`[${error.name}] ${error.message}`)
   })
 
-  // open index.html served by python -m http.server
-  await page.goto('http://localhost:8000/');
+  await page.goto('/');
 
   // we expect errors!
-  expect(messages).not.toEqual([]);
-
+  await expect.poll(() => messages).not.toEqual([])
+  console.log(messages)
 });
