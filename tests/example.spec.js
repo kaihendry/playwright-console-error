@@ -15,6 +15,10 @@ test('console error', async ({ page }) => {
 
   await page.goto('/');
 
+  // get h1 text
+  const h1 = await page.$('h1');
+  console.log(await h1.textContent());
+
   // we expect errors!
   await expect.poll(() => messages).not.toEqual([])
   console.log(messages)

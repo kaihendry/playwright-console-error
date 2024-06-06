@@ -18,3 +18,5 @@ jobs:
       run: npx playwright install --with-deps
     - run: npx envinfo --preset playwright
     - run: npx playwright test
+      env:
+        TEST: ${{ github.run_id }}

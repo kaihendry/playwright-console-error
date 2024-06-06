@@ -58,7 +58,7 @@ module.exports = defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'python -m http.server',
+    command: 'cd web && PORT=8000 go run .',
     url: "http://localhost:8000/",
     reuseExistingServer: !process.env.CI,
   },
