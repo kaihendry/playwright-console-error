@@ -1,8 +1,3 @@
-# Can't see error message
+# Nothing to see here
 
-Expected to see:
-
-    Failed to load resource: the server responded with a status of 400 ()
-
-
-Bug filed: https://github.com/microsoft/playwright/issues/31142
+This is where I do my public Playwright tests.
